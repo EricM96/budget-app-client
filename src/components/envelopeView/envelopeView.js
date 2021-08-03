@@ -1,10 +1,30 @@
+import { Envelope } from '../envelope/envelope';
+
 export function EnvelopeView() {
+  const envelopes = [
+    {
+      'name': 'groceries',
+      'balance': '1500.00'
+    },
+    {
+      'name': 'rent',
+      'balance': '2000.00'
+    }
+  ];
+
+  const renderEnvelopes = () => {
+    return envelopes.map((envelope) => {
+      return (
+        <Envelope name={envelope.name} balance={envelope.balance}/>
+      );
+    });
+  };
+
   return (
     <div className='envelope-view'>
       <h1>User Envelopes</h1>
       <ul>
-        <li>Food: $1,500.00</li>
-        <li>Rent: $2,000.00</li>
+        {renderEnvelopes()}
       </ul>
     </div>
   );
