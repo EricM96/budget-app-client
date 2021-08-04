@@ -35,7 +35,7 @@ export function EnvelopeView() {
 
   return (
     <div className={classes.root}>
-      <List component="nav" aria-label="main mailbox folders">
+      <List component='nav' aria-label='main mailbox folders'>
         {renderEnvelopes()}
       </List>
     </div>

@@ -28,15 +28,15 @@ function App() {
   return (
     <Box>
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position='static'>
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Envelopes
+            <Typography variant='h6' className={classes.title}>
+              
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Button color='inherit'>Login</Button>
           </Toolbar>
         </AppBar>
       </div>
