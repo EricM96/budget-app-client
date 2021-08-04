@@ -1,4 +1,15 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
 import { Envelope } from '../envelope/envelope';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+  },
+}));
 
 export function EnvelopeView() {
   const envelopes = [
@@ -20,12 +31,13 @@ export function EnvelopeView() {
     });
   };
 
+  const classes = useStyles();
+
   return (
-    <div className='envelope-view'>
-      <h1>User Envelopes</h1>
-      <ul>
+    <div className={classes.root}>
+      <List component="nav" aria-label="main mailbox folders">
         {renderEnvelopes()}
-      </ul>
+      </List>
     </div>
   );
-}
+};
